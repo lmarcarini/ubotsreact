@@ -12,7 +12,6 @@ function ModalAvaliar(props) {
 
     const handleSubmit=(event)=>{
         event.preventDefault()
-        console.log("https://entrevistaubotfilmes.000webhostapp.com/API/avalia.php?userId=1&filmeId="+props.filmeid+"&score="+event.target.score.value)
         fetch("https://entrevistaubotfilmes.000webhostapp.com/API/avalia.php?userId=1&filmeId="+props.filmeid+"&score="+event.target.score.value)
             .then(res=>{
                 if(res.status===200) {alert("Avaliação bem sucedida!")}
@@ -20,7 +19,7 @@ function ModalAvaliar(props) {
             })
         handleClose()
     }
-//action="https://entrevistaubotfilmes.000webhostapp.com/API/avalia.php?userId=1&filmeId=2" method="get" target="_blank"
+
     return (
         <div>
             <Button variant="primary" onClick={()=>handleShow()}>Avaliar</Button>

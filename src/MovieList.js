@@ -61,5 +61,4 @@ function MovieList() {
       }
 }
 
-//YtM%mxh*7L@I*nEzovFn
 export default MovieList;
